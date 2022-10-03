@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+Se actualiza la pagina index para que contenga nuevas etiquetas metas y demas etiquetas para la sematica del body
+-->
+        <!--
+         //DIV es un contenedor
+         // Se pueden hacer cambios --> 
+        <!--<br/>//estas hacen espacios o salto de linea <br/>--> 
+        <!--// el style="text-align: left" define la aliniacion del texto --> 
+<html lang="es">
+    <head>
+        <title>Tienda en linea</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Esta pagina contine etiquetas del tipo html5 y luego enlaces o definicion de estilos css ">
+        <meta name="keywors" content="html, css3">  
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+    </head>
+    
+   <!-- //Hay que respetar la gerarquia de uso de etiquetas -->
+    <body>
+       
+        <header id="encabezado"> <!-- Etiqueta apara ofrecerle al broswer info de que es un encabezado -->
+             <h1>TechShop</h1>
+        </header>    
+             
+        <nav id="menu">  <!-- esta etiqueta es para ilustrarle al broswer que posiblemente es menu -->  
+         <br/>
+         <!<!-- //Abajo se muestra como usar enlaces entre las clases creadas -->    
+        <a href="ejemplo9.html">Back</a>|
+        <a href="index.html">Home</a>|
+        <a href="ejemplo2.html">next</a>|<br/>
+        </nav>
+        <aside id="barralateral"> <!-- Etiqueta para indicar que es una barra lateral al final pueder ser a la derecha o izquierda, y puede ser varias -->
+            <h2> Productos mas vendidos</h2>
+            <p> Bienvenidos a la pagina de la Tienda en Linea ... </p>
+        </aside>
+        <section id="contenido">
+            <h2>Ejemplos de iframes</h2>
+            <article>
+                <header><h3> La Pagina de la Fidelitas </h3></header>
+                <iframe src="https://ufidelitas.ac.cr/" width="700" height="400">
+                    
+                </iframe> 
+                <footer>Escuela de Sistemas de la Fide</footer>
+            </article>
+            
+                <header><h3> Video de Youtube </h3></header>
+                <iframe width="521" 
+                        height="480" 
+                        src="https://www.youtube.com/embed/yY6XnbWnK4o" 
+                        title="Create HTML5" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+                <footer>Alguien mostrando HTML5</footer>
+            
+            <article>
+                <header><h3> Stem Center </h3></header>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.980591459473!2d-84.03575289999999!3d9.9355726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e3aa66fa362b%3A0xf134cee2340078e2!2sStem%20Center%20Fid%C3%A9litas!5e0!3m2!1ses!2scr!4v1664756531809!5m2!1ses!2scr" 
+                        width="600" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        ></iframe> 
+                <footer>La ubicacion de Stem Center en Google maps</footer>
+            </article>
+        </section> 
+        <footer id="piepagina">Derechos reservados &COPY; 2022<address style="display: inline">Tel 8898-7744</address> </footer>
+
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+Se actualiza la pagina index para que contenga nuevas etiquetas metas y demas etiquetas para la sematica del body
+-->
+        <!--
+         //DIV es un contenedor
+         // Se pueden hacer cambios --> 
+        <!--<br/>//estas hacen espacios o salto de linea <br/>--> 
+        <!--// el style="text-align: left" define la aliniacion del texto --> 
+<html lang="es">
+    <head>
+        <title>Tienda en linea</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Esta pagina contine etiquetas del tipo html5 y luego enlaces o definicion de estilos css ">
+        <meta name="keywors" content="html, css3">  
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+    </head>
+    
+   <!-- //Hay que respetar la gerarquia de uso de etiquetas -->
+    <body>
+       
+        <header id="encabezado"> <!-- Etiqueta apara ofrecerle al broswer info de que es un encabezado -->
+             <h1>TechShop</h1>
+        </header>    
+             
+        <nav id="menu">  <!-- esta etiqueta es para ilustrarle al broswer que posiblemente es menu -->  
+         <br/>
+         <!<!-- //Abajo se muestra como usar enlaces entre las clases creadas -->    
+        <a href="ejemplo9.html">Back</a>|
+        <a href="index.html">Home</a>|
+        <a href="ejemplo2.html">next</a>|<br/>
+        </nav>
+        <aside id="barralateral"> <!-- Etiqueta para indicar que es una barra lateral al final pueder ser a la derecha o izquierda, y puede ser varias -->
+            <h2> Productos mas vendidos</h2>
+            <p> Bienvenidos a la pagina de la Tienda en Linea ... </p>
+        </aside>
+        <section id="contenido">
+            <h2>Ejemplos de videos</h2>
+            <article>
+                <header><h3> Torpedo </h3></header>
+                <figure style="display: inline">
+                    <video width="320" height="240" controls >
+                        <source src="videos/torpedo.mp4" type="video/mp4">
+                        Your browser does not support the <code>video</code>.tag
+                    </video>
+                    <figcaption>Realizada en 2021</figcaption>
+                </figure>
+            </article>
+            
+        </section> 
+        <footer id="piepagina">Derechos reservados &COPY; 2022<address style="display: inline">Tel 8898-7744</address> </footer>
+
+    </body>
+</html>
