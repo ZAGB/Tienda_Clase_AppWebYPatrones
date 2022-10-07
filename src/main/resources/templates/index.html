@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Tecshop</title>
+        <meta charset="UTF-8">
+      
+    </head>
+    <body>
+        <h1>Hello from the other side ...</h1>
+        <p>Nombre: <span th:text="${cliente.nombre}"></p>
+        <p>Apellidos: <span th:text="${cliente.apellidos}"></p>
+        <p>Correo: <span th:text="${cliente.correo}"></p>
+        <p>Telefono <span th:text="${cliente.telefono}"></p>
+        </b>
+        </b>
+        </b>         
+        <div th:if"${clientes != null and !clientes.empty}">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Correo</th>
+                    <th>Telefono</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr th:each="item :${clientes}" >
+                    <td th:text="${item.nombre}" ></td>
+                    <td th:text="${item.apellidos}"></td>
+                    <td th:text="${item.correo}"></td>
+                    <td th:text="${item.telefono}"></td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        
+        <div th:if"${clientes == null or clientes.empty}">
+        
+        </div>    
+    </body>
+</html>
