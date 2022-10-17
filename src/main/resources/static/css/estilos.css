@@ -93,3 +93,8 @@
     text-align: center;
     
 }
+#holis{
+    position: absolute;
+    top: 900%;
+    color: whitesmoke;   
+}
