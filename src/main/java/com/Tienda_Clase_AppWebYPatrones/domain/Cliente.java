@@ -1,5 +1,6 @@
 package com.Tienda_Clase_AppWebYPatrones.domain;
 
+import java.io.Serializable;
 import javax.persistence.*;
 import lombok.Data;
 
@@ -7,7 +8,7 @@ import lombok.Data;
 @Entity
 @Table (name="cliente") 
 
-public class Cliente {
+public class Cliente implements Serializable{
  
     private static final long serialVersionUID = 1L;
     
@@ -19,7 +20,11 @@ public class Cliente {
     String apellidos;
     String correo;
     String telefono;
-
+    
+    @JoinColumn(name="id_credito", referencedColumnName = "id_credito")
+    @ManyToOne
+    private Credito credito;
+    
     public Cliente() {
     }
 
@@ -29,6 +34,16 @@ public class Cliente {
         this.correo = correo;
         this.telefono = telefono;
     }
+
+    public Cliente( String nombre, String apellidos, String correo, String telefono, Credito credito) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.correo = correo;
+        this.telefono = telefono;
+        this.credito = credito;
+    }
+    
+    
     
      
     

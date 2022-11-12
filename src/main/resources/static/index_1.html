@@ -14,39 +14,32 @@ Se actualiza la pagina index para que contenga nuevas etiquetas metas y demas et
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Esta pagina contine etiquetas del tipo html5 y luego enlaces o definicion de estilos css ">
         <meta name="keywors" content="html, css3">  
-        <link href="css/menu.css" rel="stylesheet" type="text/css"/>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
         <meta name="keywors" content="html, css3">     
     </head>
     
    <!-- //Hay que respetar la gerarquia de uso de etiquetas -->
     <body>
        
-        <header class="header"> <!-- Etiqueta apara ofrecerle al broswer info de que es un encabezado -->
-         
-        <nav class="nav">  <!-- esta etiqueta es para ilustrarle al broswer que posiblemente es menu -->  
+        <header id="encabezado"> <!-- Etiqueta apara ofrecerle al broswer info de que es un encabezado -->
+             <h1>TechShop</h1>
+        </header>    
+             
+        <nav id="menu">  <!-- esta etiqueta es para ilustrarle al broswer que posiblemente es menu -->  
          <br/>
-         <!<!-- //Abajo se muestra como usar enlaces entre las clases creadas -->  
-        <a href="index.html" class="logo nav-link">TechShop</a>
-        <ul class="nav-menu" >
-        <li class="nav-menu-item"><a class = "nav-menu-link nav-link"  href="ejemplo9.html">&LeftTriangleBar;</a></li>
-        <li class="nav-menu-item"><a class = "nav-menu-link nav-link"  href="ejemplo2.html">&RightTriangleBar;</a></li>
-        <li class="nav-menu-item"><a class = "nav-menu-link nav-link"  href="audios.html">Audios</a></li>
-        <li class="nav-menu-item"><a class = "nav-menu-link nav-link"  href="videos.html">Videos</a></li>
-        <li class="nav-menu-item"><a class = "nav-menu-link nav-link"  href="iframes.html">Iframe</a></li>
-        <li class="nav-menu-item"><a class = "nav-menu-link nav-link"  href="formulario.html">Formulario</a></li>
-        </ul> 
+         <!<!-- //Abajo se muestra como usar enlaces entre las clases creadas -->    
+        <a href="ejemplo9.html">Back</a>|
+        <a href="index.html">Home</a>|
+        <a href="ejemplo2.html">next</a>|<br/>
         </nav>
-        </header>
-            <br/><br/><br/>
-            
         <aside id="barralateral"> <!-- Etiqueta para indicar que es una barra lateral al final pueder ser a la derecha o izquierda, y puede ser varias -->
-            <h2> Productos mas vendidos</h2><br/>
-            <p> Bienvenidos a la pagina de la Tienda en Linea ... </p><br/>
+            <h2> Productos mas vendidos</h2>
+            <p> Bienvenidos a la pagina de la Tienda en Linea ... </p>
         </aside>
         <section id="contenido">
-            <h2>Articulos principales</h2><br/>
+            <h2>Articulos principales</h2>
             <article>
-                <header>Portatil XRT 5000</header><br/>
+                <header>Portatil XRT 5000</header>
                 <p>Esta inspirada en la pelicula <cite>Aliens el octavo pasajero </cite>Lorem ipsum dolor sit amet consectetur adipiscing elit sociosqu a cubilia commodo scelerisque malesuada ultrices suspendisse, pretium est tempus et penatibus quam nisl tellus iaculis elementum quis aliquet eros. Et pulvinar tincidunt inceptos nascetur iaculis parturient risus fermentum, faucibus mollis suscipit condimentum lacinia massa ornare dapibus, elementum maecenas fringilla facilisis non integer lacus. Felis integer dignissim in molestie varius per, ultricies diam eu magna facilisis fames, purus accumsan aptent curae est. Facilisis fermentum hendrerit bibendum ac taciti inceptos metus hac, nulla pulvinar a dictum mus felis et fames, enim cursus quam vivamus lectus congue rutrum.</p>
                 <footer>Agregar al carrito</footer>
                 <figure>

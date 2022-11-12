@@ -4,41 +4,38 @@
     <head>
         <title>Tecshop</title>
         <meta charset="UTF-8">
+        <link href="/css/menu.css" rel="stylesheet" type="text/css"/>
       
     </head>
     <body>
-        <h1>Listado de Clientes</h1>
-<br/>
-<a th:href="@{/nuevoCliente}">Nuevo Cliente</a>
-<br/>  
-<div th:if"${clientes != null and !clientes.empty}">
+        <header th:replace="layout/plantilla :: header">
+        <div class="contenido">
+        <h1>Nuestros articulos</h1>
+        
+        <div th:if="${articulos != null and !articulos.empty}">
         <table border="1">
             <thead>
                 <tr>
-                    <th>Nombre</th>
-                    <th>Apellidos</th>
-                    <th>Correo</th>
-                    <th>Telefono</th>
-                    <th>Modificar</th>
-                    <th>Eliminar</th> 
+                    <th>Descripcion</th>
+                    <th>Precio</th>
+                    <th>Comprar</th>
+                   
                 </tr>
             </thead>
             <tbody>
-                    <tr th:each="item :${clientes}" >
-                    <td th:text="${item.nombre}" ></td>
-                    <td th:text="${item.apellidos}"></td>
-                    <td th:text="${item.correo}"></td>
-                    <td th:text="${item.telefono}"></td>
-                    <td><a th:href="@{/modificarCliente/}+ ${item.idCliente}">Modificar</a></td>
-                    <td><a th:href="@{/eliminarCliente/}+ ${item.idCliente}">Eliminar</a></td>
+                    <tr th:each="articulo : ${articulos}" >
+                    <td th:text="${articulo.descripcion}" ></td>
+                    <td th:text="${articulo.precio}"></td>
+                    <td><a th:href="@{/carrito/agregar}+ ${articulo.idArticulo}">Agregar</a></td>
                     
                 </tr>
             </tbody>
         </table>
         </div>
-        
-        <div th:if"${clientes == null or clientes.empty}">
-        
-        </div>    
+        <div th:if="${articulos == null or articulos.empty}">
+            No tenemos lista de articulos que mostrar...
+        </div> 
+        </div> 
+        <footer th:replace="layout/plantilla :: footer"/>
     </body>
 </html>
