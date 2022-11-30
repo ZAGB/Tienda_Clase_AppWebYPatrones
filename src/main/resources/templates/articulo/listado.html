@@ -5,43 +5,45 @@
         <title>Tecshop</title>
         <meta charset="UTF-8">
         <link href="/css/menu.css" rel="stylesheet" type="text/css"/>
-      
+
     </head>
     <body>
-        <h1>Listado de Articulos</h1>
+        <h1 th:text="#{articulo.titulo}">Listado de Articulos</h1>
         <header th:replace="layout/plantilla :: header"/>
-        <div class="contenido"
-<br/>
-<a th:href="@{/articulo/nuevo}">Nuevo Cliente</a>
-<br/>  
-<div th:if"${articulos != null and !articulos.empty}">
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Descripcion</th>
-                    <th>Precio</th>
-                    <th>Existencias</th>
-                    <th>Activa</th>
+        <div class="contenido">
+            <br/>
+            <a th:href="@{/articulo/nuevo}">Nuevo Cliente</a>
+            <br/>  
+            <div th:if"${articulos != null and !articulos.empty}">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th th:text="#{articulo.descripcion}" >Descripcion</th>
+                            <th th:text="#{articulo.precio}" >Precio</th>
+                            <th th:text="#{articulo.existencias}" >Existencias</th>
+                            <th th:text="#{articulo.activo}" >Activa</th>
+                            <th th:text="#{articulo.eliminar}" >Eliminar</th>
+                            <th th:text="#{articulo.actualizar}" >Actualizar</th>
 
-                </tr>
-            </thead>
-            <tbody>
-                    <tr th:each="articulo :${articulos}" >
-                    <td th:text="${articulo.descripcion}" ></td>
-                    <td th:text="${#numbers.formatDecimal(articulo.precio,3,2)}" style="text-align: right" ></td>
-                    <td th:text="${articulo.existencias}" style="text-align:center" ></td>
-                    <td><input type="checkbox" name="activo" th:checked="${articulo.activo}" disabled="true" ></td>
-                    <td th:text="${#numbers.formatDecimal(item.credito.limite, 3, 2)}" style="text-align: right" ></td>
-                    <td><a th:href="@{/articulo/eliminar}+ ${articulo.idArticulo}">Modificar</a></td>
-                    <td><a th:href="@{/articulo/modificar}+ ${articulo.idArticulo}">Eliminar</a></td>
-                    
-                </tr>
-            </tbody>
-        </table>
-        </div>
-        <div th:if"${articulos == null or articulos.empty}">
-            No tenemos lista de articulos que mostrar...
-        </div> 
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="articulo :${articulos}" >
+                            <td th:text="${articulo.descripcion}" ></td>
+                            <td th:text="${#numbers.formatDecimal(articulo.precio,3,2)}" style="text-align: right" ></td>
+                            <td th:text="${articulo.existencias}" style="text-align:center" ></td>
+                            <td><input type="checkbox" name="activo" th:checked="${articulo.activo}" disabled="true" ></td>
+                            <td th:text="${#numbers.formatDecimal(item.credito.limite, 3, 2)}" style="text-align: right" ></td>
+                            <td><a th:href="@{/articulo/eliminar}+ ${articulo.idArticulo}" th:text="#{accion.actualizar}">Modificar</a></td>
+                            <td><a th:href="@{/articulo/modificar}+ ${articulo.idArticulo}"th:text="#{accion.eliminar}" >Eliminar</a></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div th:if"${articulos == null or articulos.empty}" th:text="#{articulo.no_mostrar}" >
+                No tenemos lista de articulos que mostrar...
+            </div> 
         </div> 
         <footer th:replace="layout/plantilla :: footer"/>
     </body>
